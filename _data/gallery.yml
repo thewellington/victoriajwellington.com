@@ -1,0 +1,13 @@
+# Add your photos here. `image` paths are under the site root (e.g. /assets/...)
+
+- title: "Campfire geometry"
+  image: /assets/images/gallery/placeholder-lake.svg
+  caption: "Replace with a real image — summer nights, pine smoke, and stars."
+
+- title: "Shell on the water"
+  image: /assets/images/gallery/placeholder-crew.svg
+  caption: "A placeholder oar and wake until you drop in your crew shots."
+
+- title: "Shutter happy"
+  image: /assets/images/gallery/placeholder-light.svg
+  caption: "Photography is the extracurricular with its own light meter."

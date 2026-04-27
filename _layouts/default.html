@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}
+    </title>
+    <meta name="description" content="{{ page.description | default: site.description }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+  </head>
+  <body class="theme-oars page-{{ page.slug | default: 'home' }}">
+    <div class="water-ripple" aria-hidden="true"></div>
+    <header class="mast">
+      <div class="shell-wide mast__inner">
+        <a class="wordmark" href="{{ '/' | relative_url }}">
+          <span class="wordmark__oars" aria-hidden="true">~~</span>
+          {{ site.title }}
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul>
+            <li>
+              <a href="{{ '/' | relative_url }}"
+                class="nav__link{% if page.url == '/' or page.url == '/index.html' %} nav__link--on{% endif %}"
+                >Crew Quarters</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ '/academic/' | relative_url }}"
+                class="nav__link{% if page.url contains 'academic' %} nav__link--on{% endif %}"
+                >Logbook: Academic</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ '/extracurricular/' | relative_url }}"
+                class="nav__link{% if page.url contains 'extracurricular' %} nav__link--on{% endif %}"
+                >Beyond the Oar</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ '/photography/' | relative_url }}"
+                class="nav__link{% if page.url contains 'photography' %} nav__link--on{% endif %}"
+                >Through the Lens</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="oar-rail" role="presentation" aria-hidden="true">
+      <svg class="oar-rail__svg" viewBox="0 0 1200 32" preserveAspectRatio="none">
+        <path
+          class="oar-rail__wave"
+          d="M0 20 Q150 0 300 20 T600 20 T900 20 T1200 20 L1200 32 L0 32 Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+
+    <main class="content">
+      <div class="shell-wide">
+        {% if page.title and page.url != '/index.html' and page.url != '/'
+        %}
+        <h1 class="title title--tack">{{ page.title }}</h1>
+        {% endif %} {{ content }}
+      </div>
+    </main>
+
+    <footer class="stern">
+      <div class="shell-wide stern__inner">
+        <p class="stern__motto">“Catch water. Send the boat. Repeat.”</p>
+        <p class="stern__fine">
+          Built with
+          <a href="https://jekyllrb.com/" rel="noopener">Jekyll</a>
+          &amp; Ruby. Replace placeholder text and photos with your own story.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+# Bundler: lockfile and .bundle/config are committed; installed gems are not
+vendor/bundle/
+.bundle/*
+!.bundle/config
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+*.gem
+.DS_Store

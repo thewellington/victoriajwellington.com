@@ -1,0 +1,34 @@
+# Jekyll config — College application portfolio
+title: Victoria J. Wellington
+email: ""
+description: >-
+  Academic highlights, river-and-oar adventures, and a few frames of light.
+baseurl: ""
+url: "https://victoriajwellington.com"
+
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - flake.nix
+  - flake.lock
+  - .env
+  - vendor
+  - .bundle
+  - bin
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+plugins: []

@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+# Always run the Bundler-locked Jekyll (see Gemfile / Gemfile.lock).
+cd "$(dirname "$0")/.."
+exec bundle exec jekyll "$@"

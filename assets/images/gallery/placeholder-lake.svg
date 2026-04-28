@@ -1,13 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" role="img" aria-labelledby="t1">
-  <title id="t1">Placeholder: lake and canoe</title>
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#3d6a7a"/>
-      <stop offset="1" stop-color="#0b1f2a"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="560" fill="url(#g)"/>
-  <ellipse cx="400" cy="300" rx="200" ry="8" fill="#1a3d52" opacity="0.4"/>
-  <path d="M 280 315 Q 400 250 520 315 L 500 330 Q 400 280 300 330 Z" fill="#5c3d2e" opacity="0.85"/>
-  <text x="400" y="480" text-anchor="middle" fill="#e8f2f4" font-family="Georgia,serif" font-size="22" opacity="0.9">Wabun placeholder</text>
+  <title id="t1">Placeholder: trip / landscape</title>
+  <rect width="800" height="560" fill="#f5f3ee"/>
+  <rect x="0" y="380" width="800" height="180" fill="#141418" opacity="0.08"/>
+  <path d="M 200 400 L 600 400 L 580 340 L 220 340 Z" fill="#7ecff4" opacity="0.9"/>
+  <path d="M 280 340 L 520 340" stroke="#0c0c0f" stroke-width="4" stroke-linecap="round" opacity="0.35"/>
+  <text x="400" y="500" text-anchor="middle" fill="#4a4a54" font-family="system-ui,sans-serif" font-size="18" font-weight="600">Wabun · placeholder</text>
 </svg>

@@ -10,17 +10,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
   </head>
-  <body class="theme-oars page-{{ page.slug | default: 'home' }}">
-    <div class="water-ripple" aria-hidden="true"></div>
+  <body class="theme-crew page-{{ page.slug | default: 'home' }}">
+    <div class="deck-bg" aria-hidden="true"></div>
     <header class="mast">
       <div class="shell-wide mast__inner">
         <a class="wordmark" href="{{ '/' | relative_url }}">
-          <span class="wordmark__oars" aria-hidden="true">~~</span>
+          <svg
+            class="wordmark__blade"
+            width="20"
+            height="26"
+            viewBox="0 0 20 26"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              fill="currentColor"
+              d="M10 0 20 7v12L10 26 0 19V7L10 0Zm0 3.2L3.2 8v10L10 22.8 16.8 18V8L10 3.2Z"
+            />
+          </svg>
           {{ site.title }}
         </a>
         <nav class="nav" aria-label="Primary">
@@ -57,14 +69,12 @@
       </div>
     </header>
 
-    <div class="oar-rail" role="presentation" aria-hidden="true">
-      <svg class="oar-rail__svg" viewBox="0 0 1200 32" preserveAspectRatio="none">
-        <path
-          class="oar-rail__wave"
-          d="M0 20 Q150 0 300 20 T600 20 T900 20 T1200 20 L1200 32 L0 32 Z"
-          fill="currentColor"
-        />
-      </svg>
+    <div class="rail-stripe" role="presentation" aria-hidden="true">
+      <span class="rail-stripe__band rail-stripe__band--blade"></span>
+      <span class="rail-stripe__band rail-stripe__band--light"></span>
+      <span class="rail-stripe__band"></span>
+      <span class="rail-stripe__band rail-stripe__band--light"></span>
+      <span class="rail-stripe__band rail-stripe__band--blade"></span>
     </div>
 
     <main class="content">

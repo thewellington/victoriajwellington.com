@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" role="img" aria-labelledby="t1">
-  <title id="t1">Placeholder: light and bokeh</title>
+  <title id="t1">Placeholder: light / photo</title>
   <defs>
-    <radialGradient id="b" cx="0.2" cy="0.1" r="0.7">
-      <stop offset="0" stop-color="#f7d9b5"/>
-      <stop offset="1" stop-color="#2a4a5a"/>
+    <radialGradient id="g" cx="0.25" cy="0.2" r="0.65">
+      <stop offset="0" stop-color="#fff8e7"/>
+      <stop offset="0.45" stop-color="#f5f3ee"/>
+      <stop offset="1" stop-color="#dcd7cc"/>
     </radialGradient>
   </defs>
-  <rect width="800" height="560" fill="url(#b)"/>
-  <circle cx="200" cy="400" r="20" fill="#e8f2f4" opacity="0.25"/>
-  <circle cx="500" cy="200" r="12" fill="#e8f2f4" opacity="0.35"/>
-  <circle cx="650" cy="120" r="6" fill="#e8f2f4" opacity="0.45"/>
-  <text x="400" y="520" text-anchor="middle" fill="#0b1f2a" font-family="Georgia,serif" font-size="22" opacity="0.6">Light placeholder</text>
+  <rect width="800" height="560" fill="url(#g)"/>
+  <circle cx="620" cy="140" r="40" fill="#7ecff4" opacity="0.35"/>
+  <rect x="100" y="420" width="120" height="4" fill="#0c0c0f" opacity="0.12" transform="rotate(-8 160 422)"/>
+  <text x="400" y="520" text-anchor="middle" fill="#4a4a54" font-family="system-ui,sans-serif" font-size="18" font-weight="600">Photo · placeholder</text>
 </svg>

@@ -1,28 +1,17 @@
-/// Tight carbon-fiber weave (CSS-only). $base: hull / ink / any near-black.
+@use "sass:color";
+
+// Bold carbon-fiber tile: two grays on a dark base, offset 10px (reads on real screens).
+// Much more visible than hairline rgba gradients.
 @mixin carbon-fiber($base) {
+  $thread-a: color.scale($base, $lightness: 18%);
+  $thread-b: color.scale($base, $lightness: 8%);
+
   background-color: $base;
-  background-image:
-    repeating-linear-gradient(
-      28deg,
-      rgba(255, 255, 255, 0.042) 0,
-      rgba(255, 255, 255, 0.042) 1px,
-      transparent 1px,
-      transparent 5px
-    ),
-    repeating-linear-gradient(
-      -28deg,
-      rgba(0, 0, 0, 0.2) 0,
-      rgba(0, 0, 0, 0.2) 1px,
-      transparent 1px,
-      transparent 5px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.018) 0,
-      rgba(255, 255, 255, 0.018) 1px,
-      transparent 1px,
-      transparent 6px
-    );
-  background-size: 4px 4px, 4px 4px, 6px 6px;
-  background-repeat: repeat, repeat, repeat;
+  background-image: linear-gradient(27deg, $thread-a 5px, transparent 5px),
+    linear-gradient(207deg, $thread-a 5px, transparent 5px),
+    linear-gradient(27deg, $thread-b 5px, transparent 5px),
+    linear-gradient(207deg, $thread-b 5px, transparent 5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 0, 10px 0, 0 10px;
+  background-repeat: repeat, repeat, repeat, repeat;
 }

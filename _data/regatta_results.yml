@@ -1,0 +1,158 @@
+# Victoria's on-water results — edit times/places as new regattas come in.
+# results_url = official timing/results page (CrewTimer, Time-Team, or RegattaCentral).
+
+club: Vashon Island Rowing Club
+club_short: VIRC
+
+regattas:
+  - name: USRowing Northwest Youth Championships
+    slug: northwest-youth-2026
+    date: 2026-05-17
+    date_label: May 16–17, 2026
+    venue: Vancouver Lake, Vancouver, WA
+    format: sprint
+    host: USRowing
+    url: https://www.regattacentral.com/regatta/?job_id=8094
+    results_url: https://regatta.time-team.nl/usrowing-northwest-youth/2026/results/c693ac1a8-19fa-4c0b-8673-d56a7036fb6d.php
+    results:
+      - event: Women's U16 4x+
+        boat: VIRC
+        seat: stroke
+        round: Time trial
+        time: "8:36.32"
+        place: 1
+        crew:
+          - { seat: bow, name: E Webb }
+          - { seat: "2", name: H Shrestha }
+          - { seat: "3", name: J Ely }
+          - { seat: stroke, name: V Wellington }
+          - { seat: cox, name: A Cartier }
+      - event: Women's U16 4x+
+        boat: VIRC
+        seat: stroke
+        round: Final A
+        time: "8:19.91"
+        place: 2
+        crew:
+          - { seat: bow, name: E Webb }
+          - { seat: "2", name: H Shrestha }
+          - { seat: "3", name: J Ely }
+          - { seat: stroke, name: V Wellington }
+          - { seat: cox, name: A Cartier }
+      - event: Women's U16 2x
+        boat: VIRC B
+        seat: stroke
+        round: Time trial
+        time: "10:17.77"
+        place: 7
+        crew:
+          - { seat: bow, name: H Shrestha }
+          - { seat: stroke, name: V Wellington }
+
+  - name: Swiftwater Sprints
+    slug: swiftwater-2026
+    date: 2026-03-22
+    date_label: March 22, 2026
+    venue: Jensen Point, Vashon Island, WA
+    format: sprint
+    host: Vashon Island Rowing Club
+    url: https://www.regattacentral.com/regatta/?job_id=9457
+    results_url: https://regatta.time-team.nl/swiftwater/2026/results/events.php
+    results:
+      - event: Women's U16 4x+
+        boat: VIRC
+        seat: stroke
+        round: Final
+        time: "6:13.9"
+        place: 1
+        crew:
+          - { seat: bow, name: E Webb }
+          - { seat: "2", name: H Shrestha }
+          - { seat: "3", name: J Ely }
+          - { seat: stroke, name: V Wellington }
+          - { seat: cox, name: A Cartier }
+      - event: Women's Novice 2x
+        boat: VIRC A
+        seat: bow
+        round: Final
+        time: "7:18.9"
+        place: 6
+        crew:
+          - { seat: bow, name: V Wellington }
+          - { seat: stroke, name: H Shrestha }
+      - event: Women's Novice 4x+
+        boat: Vashon
+        seat: stroke
+        round: Final
+        time: "6:05.4"
+        place: 1
+        crew:
+          - { seat: bow, name: E Webb }
+          - { seat: "2", name: H Shrestha }
+          - { seat: "3", name: J Ely }
+          - { seat: stroke, name: V Wellington }
+          - { seat: cox, name: Atalie }
+
+  - name: Vancouver Lake Spring Sprints
+    slug: vancouver-lake-2026
+    date: 2026-03-07
+    date_label: March 7–8, 2026
+    venue: Vancouver Lake, Vancouver, WA
+    format: sprint
+    host: Vancouver Lake Rowing Club
+    url: https://www.regattacentral.com/regatta/?job_id=9713
+    results_url: https://crewtimer.com/regatta/r15422
+    results:
+      - event: "Women's 2V 4x"
+        boat: VIRC B
+        seat: "2"
+        round: Heat A
+        time: "9:04.86"
+        place: 4
+        crew:
+          - { seat: bow, name: R Colvos }
+          - { seat: "2", name: V Wellington }
+          - { seat: "3", name: P Ayers }
+          - { seat: stroke, name: R Sorensen }
+      - event: Women's U16 4x+
+        boat: VIRC
+        seat: stroke
+        round: Final
+        time: "8:44.53"
+        place: 2
+        crew:
+          - { seat: bow, name: E Webb }
+          - { seat: "2", name: H Shrestha }
+          - { seat: "3", name: J Ely }
+          - { seat: stroke, name: V Wellington }
+          - { seat: cox, name: A Cartier }
+      - event: Women's Novice 4x+
+        boat: VIRC
+        seat: stroke
+        round: Heat B
+        time: "8:44.68"
+        place: 1
+        crew:
+          - { seat: bow, name: E Webb }
+          - { seat: "2", name: H Shrestha }
+          - { seat: "3", name: J Ely }
+          - { seat: stroke, name: V Wellington }
+          - { seat: cox, name: A Dalinis }
+
+  - name: Tail of the Lake
+    slug: tail-of-the-lake-2025
+    date: 2025-10-05
+    date_label: October 5, 2025
+    venue: Lake Union, Seattle, WA
+    format: head
+    host: Holy Names Academy
+    url: https://www.regattacentral.com/regatta/?job_id=9941
+    results_url: https://legacy.herenow.com/results/#/races/21380/results
+    results:
+      - event: Women's Novice 4x+
+        boat: VIRC
+        seat: stroke
+        round: Head (~4k)
+        time: "20:48.2"
+        place: 1
+        note: Full line-up not recorded in results.

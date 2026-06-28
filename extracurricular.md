@@ -12,18 +12,18 @@ description: Camp Wabun, rowing, and other commitments outside the classroom.
 
 Each summer, I head back to **Camp Wabun** for wilderness canoe tripping&mdash;days of maps, cook fires, and carrying gear between bodies of water that do not care about your schedule. I learn leadership when it is raining, patience when the wind is wrong, and joy when the camp coffee tastes like victory.
 
+<span class="pill pill--wabun">Camp Wabun · Temagami, ON</span>
+
 *Tip for your own draft:* add one story (humbling or hilarious) that only Wabun could have given you.
 
 ## Rowing &mdash; crew
 
-On the water with **crew**, the boat is the strictest teacher: you cannot bluff a stroke, and the clock does not flatter anyone. I love the long steady state, the lung-burning sprints, and the quiet moment when eight oars first feel like *one*.
+I row for the **[Vashon Island Rowing Club](https://vashoncrew.org/)** on **Vashon Island, Washington**&mdash;afternoons and evenings on Puget Sound, light-blue blades, and a boathouse community that shows up for each other. On the water, the boat is the strictest teacher: you cannot bluff a stroke, and the clock does not flatter anyone. I love the long steady state, the lung-burning sprints, and the quiet moment when eight oars first feel like *one*.
 
-<span class="pill pill--oar">Erg meters optional; joy mandatory</span>
+<span class="pill pill--oar">Vashon Island Rowing Club · Vashon, WA</span>
 
-*Replace with:* your team name, your seat or role (coxswain, rower), regattas you want to mention, and what the sport changed in you.
-
-## And the rest&hellip;
-
-Leave room for one more: music, a job, volunteering, a club you run. A single honest paragraph reads better than a laundry list.
-
+<ul class="oar-cta oar-cta--start">
+  <li><a href="{{ '/race-log/' | relative_url }}">Race log</a></li>
+</ul>
+<p class="oar-cta__note">Regatta times since fall 2025 &mdash; Tail of the Lake, Vancouver Lake Sprints, Swiftwater Sprints, Northwest Regionals.</p>
 </div>

@@ -1,0 +1,131 @@
+{% assign data = site.data.regatta_results %}
+{% assign regattas = data.regattas | sort: "date" | reverse %}
+
+<div class="race-log" markdown="0">
+  <p class="lede">
+    A running log of regatta pieces with {{ data.club }}&mdash;sprint and head races since fall 2025.
+    Times are official results where noted.
+  </p>
+
+  <p class="race-log__meta">
+    <span class="pill pill--oar">{{ data.club_short }} · {{ data.club }}</span>
+  </p>
+
+  {% for regatta in regattas %}
+  <article class="regatta-card" id="{{ regatta.slug }}">
+    <header class="regatta-card__head">
+      <div class="regatta-card__when">
+        <time datetime="{{ regatta.date }}">{{ regatta.date_label }}</time>
+      </div>
+      <h2 class="regatta-card__title">
+        {% if regatta.url %}
+        <a href="{{ regatta.url }}" rel="noopener noreferrer">{{ regatta.name }}</a>
+        {% else %}
+        {{ regatta.name }}
+        {% endif %}
+      </h2>
+      <p class="regatta-card__venue">{{ regatta.venue }}</p>
+      {% assign results_link = regatta.results_url %}
+      {% unless results_link %}
+        {% if regatta.url contains 'job_id=' %}
+          {% assign results_job_id = regatta.url | split: 'job_id=' | last | split: '&' | first %}
+          {% assign results_link = 'https://www.regattacentral.com/regatta/results?job_id=' | append: results_job_id %}
+        {% endif %}
+      {% endunless %}
+      {% if results_link %}
+      <p class="regatta-card__results">
+        <a href="{{ results_link }}" rel="noopener noreferrer">Official results</a>
+      </p>
+      {% endif %}
+      <ul class="regatta-card__tags">
+        <li><span class="regatta-tag regatta-tag--{{ regatta.format }}">{{ regatta.format }}</span></li>
+        <li><span class="regatta-tag">{{ regatta.host }}</span></li>
+      </ul>
+    </header>
+
+    {% if regatta.results.size > 0 %}
+    <div class="times-wrap">
+      <table class="times-table">
+        <caption class="visually-hidden">Results at {{ regatta.name }}</caption>
+        <thead>
+          <tr>
+            <th scope="col">Event</th>
+            <th scope="col">Boat</th>
+            <th scope="col">Seat</th>
+            <th scope="col">Round</th>
+            <th scope="col">Time</th>
+            <th scope="col">Place</th>
+          </tr>
+        </thead>
+        {% for row in regatta.results %}
+        <tbody class="times-block">
+          <tr class="times-block__result">
+            <td data-label="Event">{{ row.event }}</td>
+            <td data-label="Boat">{{ row.boat }}</td>
+            <td data-label="Seat">{{ row.seat }}</td>
+            <td data-label="Round">{% if row.round %}{{ row.round }}{% else %}&mdash;{% endif %}</td>
+            <td data-label="Time" class="times-table__time">
+              {% if row.time %}<span class="time-value">{{ row.time }}</span>{% else %}&mdash;{% endif %}
+            </td>
+            <td data-label="Place">
+              {% if row.place %}
+              {% assign p = row.place %}
+              <span class="place-badge place-badge--{{ p }}">
+                {% if p == 1 %}1st{% elsif p == 2 %}2nd{% elsif p == 3 %}3rd{% else %}{{ p }}th{% endif %}
+              </span>
+              {% else %}&mdash;{% endif %}
+            </td>
+          </tr>
+          {% if row.crew %}
+          {% assign seat_order = "bow,2,3,4,stroke,cox" | split: "," %}
+          {% assign row_seat = row.seat | append: "" %}
+          {% assign has_cox = false %}
+          {% for member in row.crew %}
+            {% assign member_seat = member.seat | append: "" %}
+            {% if member_seat == "cox" %}{% assign has_cox = true %}{% endif %}
+          {% endfor %}
+          <tr class="times-block__lineup">
+            <td colspan="6">
+              <details class="lineup">
+                <summary class="lineup__summary">
+                  <span class="lineup__summary-label">Line-up</span>
+                  <span class="lineup__summary-hint">bow &rarr; stern{% if has_cox %} · coxswain{% endif %}</span>
+                </summary>
+                <ol class="lineup__seats">
+                  {% for seat_key in seat_order %}
+                    {% for member in row.crew %}
+                      {% assign member_seat = member.seat | append: "" %}
+                      {% if member_seat == seat_key %}
+                  <li class="lineup__seat{% if member_seat == row_seat %} lineup__seat--yours{% endif %}">
+                    <span class="lineup__position">{% if member_seat == "cox" %}coxswain{% else %}{{ member_seat }}{% endif %}</span>
+                    <span class="lineup__name">{{ member.name }}</span>
+                  </li>
+                      {% endif %}
+                    {% endfor %}
+                  {% endfor %}
+                </ol>
+              </details>
+            </td>
+          </tr>
+          {% endif %}
+          {% if row.note %}
+          <tr class="times-block__note">
+            <td colspan="6"><em>{{ row.note }}</em></td>
+          </tr>
+          {% endif %}
+        </tbody>
+        {% endfor %}
+      </table>
+    </div>
+    {% else %}
+    <p class="regatta-card__empty">
+      {% if regatta.note %}{{ regatta.note }}{% else %}No times logged yet for this regatta.{% endif %}
+    </p>
+    {% endif %}
+
+    {% if regatta.note and regatta.results.size > 0 %}
+    <p class="regatta-card__footnote"><em>{{ regatta.note }}</em></p>
+    {% endif %}
+  </article>
+  {% endfor %}
+</div>

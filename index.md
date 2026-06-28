@@ -26,7 +26,7 @@ layout: default
   <div class="card card--tilt">
     <h2> Beyond the oar</h2>
     <p>
-      Camp Wabun trails, long days in a racing shell, and the communities that teach you what textbooks cannot.
+      Camp Wabun trails, afternoons and evenings with the Vashon Island Rowing Club, and the communities that teach you what textbooks cannot.
     </p>
     <a href="{{ '/extracurricular/' | relative_url }}">Read more →</a>
   </div>

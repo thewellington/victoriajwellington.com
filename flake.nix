@@ -1,30 +1,18 @@
 {
-  description = "College portfolio (Jekyll + Ruby)";
+  description = "victoriajwellington.com Jekyll site";
 
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+
+  outputs = { nixpkgs, ... }: let
+    lib = import ./nix/jekyll-site-lib.nix { inherit nixpkgs; };
+  in {
+    devShells = lib.forAllSystems (system: {
+      jekyll-site = lib.mkDevShell {
+        inherit system;
+        ruby = "ruby_3_3";
+        withNokogiri = false;
+        withSassc = false;
+      };
+    });
   };
-
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = import nixpkgs { inherit system; };
-      in
-      {
-        devShells.default = pkgs.mkShell {
-          name = "victoria-portfolio";
-          buildInputs = with pkgs; [
-            ruby
-            bundler
-            # Fast native gems when needed
-            libffi zlib openssl readline
-          ];
-          shellHook = ''
-            export BUNDLE_GEMFILE="$PWD/Gemfile"
-            echo "Gems (Bundler): bundle install"
-            echo "Jekyll:          bundle exec jekyll serve   or   ./bin/jekyll serve"
-          '';
-        };
-      });
 }

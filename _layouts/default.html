@@ -19,7 +19,11 @@
     <div class="deck-bg" aria-hidden="true"></div>
     <header class="mast">
       <div class="shell-wide mast__inner">
-        <a class="wordmark" href="{{ '/' | relative_url }}">
+        <a
+          class="wordmark{% if page.url == '/' or page.url == '/index.html' %} wordmark--on{% endif %}"
+          href="{{ '/' | relative_url }}"
+          {% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}
+        >
           <svg
             class="wordmark__blade"
             width="20"
@@ -38,16 +42,10 @@
         <nav class="nav" aria-label="Primary">
           <ul>
             <li>
-              <a href="{{ '/' | relative_url }}"
-                class="nav__link{% if page.url == '/' or page.url == '/index.html' %} nav__link--on{% endif %}"
-                >Crew Quarters</a
-              >
-            </li>
-            <li>
               <a
                 href="{{ '/academic/' | relative_url }}"
                 class="nav__link{% if page.url contains 'academic' %} nav__link--on{% endif %}"
-                >Logbook: Academic</a
+                >Academics</a
               >
             </li>
             <li>

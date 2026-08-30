@@ -112,7 +112,8 @@ a:hover {
 
 .pill--oar::before,
 .pill--wabun::before,
-.pill--mcmurray::before {
+.pill--mcmurray::before,
+.pill--vhs::before {
   content: "";
   width: 0.55em;
   height: 0.55em;
@@ -130,7 +131,116 @@ a:hover {
 }
 
 .pill--mcmurray::before {
+  background: #1e3a5f;
+}
+
+.pill--vhs::before {
   background: #2d6a4f;
+}
+
+$school-mcmurray: #1e3a5f;
+$school-vhs: #2d6a4f;
+$school-wabun: #c0392b;
+
+.school-list {
+  list-style: none;
+  margin: 0.75rem 0 1.5rem;
+  padding: 0;
+}
+
+.school-list li {
+  position: relative;
+  padding-left: 1.15em;
+  margin: 0.45em 0;
+}
+
+.school-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 0.55em;
+  height: 0.55em;
+  border-radius: 2px;
+}
+
+.school-list--mcmurray li::before {
+  background: $school-mcmurray;
+}
+
+.school-list--vhs li::before {
+  background: $school-vhs;
+}
+
+.school-list--wabun li::before {
+  background: $school-wabun;
+}
+
+.school-list--oar li::before {
+  background: $blade;
+  transform: skewX(-8deg);
+}
+
+.wabun-years > li {
+  margin: 1.1rem 0 2rem;
+}
+
+.wabun-years__heading {
+  font-family: $font-display;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.65rem;
+  color: $ink;
+  letter-spacing: -0.02em;
+}
+
+.wabun-years .map-embed {
+  margin-top: 0.65rem;
+}
+
+.rowing-seasons-grid {
+  margin: 0.75rem 0 1.5rem;
+}
+
+.map-embed {
+  position: relative;
+  width: 100%;
+  max-width: 56rem;
+  aspect-ratio: 3 / 2;
+  margin-top: 1.35rem;
+  border-radius: $radius-card;
+  overflow: hidden;
+  border: 1px solid $line;
+  box-shadow: $shadow-float;
+  background: #fff;
+}
+
+.map-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map-embed--wabun {
+  border-top: 3px solid $school-wabun;
+}
+
+.map-embed__note {
+  margin: 0.7rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: $graphite;
+  max-width: 56rem;
+}
+
+.school-class {
+  font-family: $font-body;
+  font-size: 0.72em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: $graphite;
 }
 
 .two-col {

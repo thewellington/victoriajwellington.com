@@ -52,9 +52,10 @@
               <a
                 href="{{ '/extracurricular/' | relative_url }}"
                 class="nav__link{% if page.url contains 'extracurricular' %} nav__link--on{% endif %}"
-                >Beyond the Oar</a
+                >Extracurriculars</a
               >
             </li>
+            {% comment %} Gallery paused
             <li>
               <a
                 href="{{ '/photography/' | relative_url }}"
@@ -62,6 +63,7 @@
                 >Through the Lens</a
               >
             </li>
+            {% endcomment %}
           </ul>
         </nav>
       </div>
@@ -86,12 +88,8 @@
 
     <footer class="stern">
       <div class="shell-wide stern__inner">
-        <p class="stern__motto">“Catch water. Send the boat. Repeat.”</p>
-        <p class="stern__fine">
-          Built with
-          <a href="https://jekyllrb.com/" rel="noopener">Jekyll</a>
-          &amp; Ruby. Replace placeholder text and photos with your own story.
-        </p>
+        <p class="stern__motto">Built for the next chapter.</p>
+        <p class="stern__fine">Copyright &copy; {{ site.time | date: "%Y" }} Victoria Wellington</p>
       </div>
     </footer>
   </body>

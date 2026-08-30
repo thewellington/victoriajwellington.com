@@ -1,33 +1,53 @@
 ---
 layout: default
 title: Academics
-description: Academics, clarinet, and highlights for college applications.
+description: Academics and highlights for college applications.
 ---
 
 <div class="prose" markdown="1">
 
-<p class="lede">I learn best with my hands on the tiller and my eyes on the horizon&mdash;whether that is a data set, a primary source, or a really good lab question.</p>
+<p class="lede">I learn best when I can ask a good question and follow it&mdash;whether that is a data set, a primary source, or a really good lab problem.</p>
+
+## Vashon High School <span class="school-class">(Class of 2030)</span>
+
+<span class="pill pill--vhs">Vashon High School · Vashon, WA</span>
+
+### Honors
+
+<ul class="school-list school-list--vhs">
+  <li><strong>Honors math</strong> (2026&ndash;2027)</li>
+</ul>
+
+### Band
+
+<ul class="school-list school-list--vhs">
+  <li><strong>Wind Ensemble</strong> (2026&ndash;2027)</li>
+</ul>
+
+## McMurray Middle School <span class="school-class">(Class of 2026)</span>
 
 <span class="pill pill--mcmurray">McMurray Middle School · Vashon, WA</span>
 
-**Replace the bullets below** with your real courses, awards, and academic story. The whimsy is in the design; the facts should be yours.
+### Honors
 
-## What I am carrying into college
+<ul class="school-list school-list--mcmurray">
+  <li><strong>Honors math</strong> (2025&ndash;2026)</li>
+  <li><strong>Dr. F. A. McMurray Certificate of Academic Excellence</strong> &mdash; awarded for outstanding academic excellence, dedication, and hard work</li>
+</ul>
 
-- **Core strengths:** (e.g. honors / AP / IB / favourite subjects&mdash;be specific.)
-- **A question I keep chasing:** (e.g. how cities move water, how language shapes memory, how disease maps spread&hellip;)
-- **A project or paper I am proud of:** one sentence on what you did, one on why it mattered to you.
+### Clubs
 
-## Reading, writing, and thinking
+<ul class="school-list school-list--mcmurray">
+  <li><strong>Associated Student Body</strong>, Executive Board (2023&ndash;2026)</li>
+  <li><strong>Campus Ambassador</strong> (2023&ndash;2026)</li>
+  <li><strong>Book Club</strong> (2023&ndash;2025)</li>
+</ul>
 
-Add a short paragraph on how you like to read, write, or debate&mdash;seminar style, lab reports, or late-night notes in the margin.
+### Band
 
-## Clarinet
-
-I play the **clarinet**&mdash;breath, reed, and the discipline of learning a part until it sounds like you meant it all along. It trains a different kind of listening than rowing: small adjustments in embouchure and finger pressure instead of blade depth, but the same patience when something almost works and you run it again.
-
-## The serious footnote
-
-If you use this site for applications, have a trusted teacher or counselor glance at the academic page for tone and accuracy.
+<ul class="school-list school-list--mcmurray">
+  <li><strong>Symphonic Band</strong> (2024&ndash;2026)</li>
+  <li><strong>Mustang Band</strong> (2023&ndash;2024)</li>
+</ul>
 
 </div>

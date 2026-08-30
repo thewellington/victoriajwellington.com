@@ -1,8 +1,9 @@
 # Jekyll config — College application portfolio
 title: Victoria J. Wellington
 email: ""
+# Gallery paused — description: Academic highlights, extracurriculars, and a few frames of light.
 description: >-
-  Academic highlights, river-and-oar adventures, and a few frames of light.
+  Academic highlights and extracurriculars.
 baseurl: ""
 url: "https://victoriajwellington.com"
 

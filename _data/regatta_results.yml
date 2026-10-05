@@ -5,6 +5,40 @@ club: Vashon Island Rowing Club
 club_short: VIRC
 
 regattas:
+  - name: Tail of the Lake
+    slug: tail-of-the-lake-2026
+    date: 2026-10-04
+    date_label: October 4, 2026
+    venue: Lake Union, Seattle, WA
+    format: head
+    host: Holy Names Academy
+    url: https://www.regattacentral.com/v3/regatta/10045
+    results_url: https://herenow.com/results/21486
+    results:
+      - event: Women's U17 4x
+        boat: VIRC
+        seat: "3"
+        round: Head (~4k)
+        time: "17:19.0"
+        place: 7
+        crew:
+          - { seat: bow, name: E Webb }
+          - { seat: "2", name: J Ely }
+          - { seat: "3", name: V Wellington }
+          - { seat: stroke, name: H Shrestha }
+      - event: Women's Jr 4x+
+        boat: VIRC B
+        seat: "2"
+        round: Head (~4k)
+        time: "17:44.5"
+        place: 4
+        crew:
+          - { seat: bow, name: E Chait }
+          - { seat: "2", name: V Wellington }
+          - { seat: "3", name: P Ayers }
+          - { seat: stroke, name: H Shrestha }
+          - { seat: cox, name: A Cartier }
+
   - name: USRowing Northwest Youth Championships
     slug: northwest-youth-2026
     date: 2026-05-17

@@ -213,14 +213,39 @@ $school-wabun: #c0392b;
   border: 1px solid $line;
   box-shadow: $shadow-float;
   background: #fff;
+  isolation: isolate;
+  overscroll-behavior: contain;
+  touch-action: manipulation;
 }
 
 .map-embed iframe {
   position: absolute;
   inset: 0;
+  z-index: 0;
   width: 100%;
   height: 100%;
   border: 0;
+  pointer-events: none !important;
+}
+
+// Hit layer above the iframe. Near-opaque paint so browsers actually
+// register clicks/scrolls on the link (fully transparent overlays often fail).
+.map-embed__link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  background: rgba(245, 243, 238, 0.02);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.map-embed__link:hover,
+.map-embed__link:focus-visible {
+  background: rgba(12, 12, 15, 0.08);
+  box-shadow: inset 0 0 0 2px rgba(192, 57, 43, 0.45);
+  outline: none;
 }
 
 .map-embed--wabun {
@@ -273,7 +298,27 @@ $school-wabun: #c0392b;
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, $blade 0%, $blade 18%, $ink 18%, $ink 22%, $line 22%, $line 100%);
+  background: linear-gradient(
+    90deg,
+    var(--card-accent, #{$blade}) 0%,
+    var(--card-accent, #{$blade}) 18%,
+    $ink 18%,
+    $ink 22%,
+    $line 22%,
+    $line 100%
+  );
+}
+
+.card--academic {
+  --card-accent: #{$school-vhs}; // Vashon green
+}
+
+.card--extracurricular {
+  --card-accent: #{$blade}; // crew blade blue
+}
+
+.card--gallery {
+  --card-accent: #{$gold};
 }
 
 .card--tilt {
@@ -631,6 +676,164 @@ $school-wabun: #c0392b;
   font-size: 0.78rem;
   line-height: 1.45;
   color: $graphite;
+}
+
+// —— Lightbox (photography gallery) ——
+
+.lightbox {
+  padding: 0;
+  border: none;
+  background: transparent;
+  max-width: min(96vw, 72rem);
+  max-height: 96vh;
+  color: #fff;
+  overflow: visible;
+}
+
+.lightbox::backdrop {
+  background: rgba(12, 12, 15, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.lightbox__frame {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2.5rem 0.5rem 0.75rem;
+}
+
+.lightbox__figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.lightbox__img {
+  display: block;
+  max-width: min(90vw, 64rem);
+  max-height: min(78vh, 56rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.35rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox__caption {
+  margin-top: 0.75rem;
+  text-align: center;
+  max-width: 36rem;
+}
+
+.lightbox__title {
+  display: block;
+  font-family: $font-display;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.lightbox__text {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.lightbox__close,
+.lightbox__nav {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(12, 12, 15, 0.12);
+  background: rgba(245, 243, 238, 0.94);
+  color: $ink;
+  cursor: pointer;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.lightbox__close:hover,
+.lightbox__nav:hover {
+  background: #fff;
+  border-color: rgba(58, 163, 217, 0.55);
+  color: $blade-deep;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.35rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 1.35rem;
+  line-height: 1;
+  z-index: 2;
+}
+
+.lightbox__close span {
+  display: block;
+  line-height: 1;
+  // × glyph sits optically low in most fonts
+  transform: translateY(-0.08em);
+}
+
+.lightbox__nav {
+  width: 2.6rem;
+  height: 2.6rem;
+  font-size: 1.65rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.lightbox__nav span {
+  display: block;
+  line-height: 1;
+  // ‹ › glyphs sit optically low/wide in most fonts
+  transform: translateY(-0.06em);
+}
+
+.lightbox__nav--prev span {
+  transform: translate(-0.04em, -0.06em);
+}
+
+.lightbox__nav--next span {
+  transform: translate(0.04em, -0.06em);
+}
+
+@media (max-width: 40rem) {
+  .lightbox__frame {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    padding-top: 2.75rem;
+  }
+
+  .lightbox__nav--prev {
+    order: 2;
+  }
+
+  .lightbox__figure {
+    order: 1;
+  }
+
+  .lightbox__nav--next {
+    order: 3;
+  }
+
+  .lightbox__nav {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
 }
 
 // —— Race log (regatta times) ——

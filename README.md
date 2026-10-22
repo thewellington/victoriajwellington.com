@@ -55,3 +55,12 @@ The generated site is written to `_site/`.
 ## After pulling changes
 
 If `Gemfile` or `Gemfile.lock` changed, run `bundle install` again before `jekyll serve` or `jekyll build`.
+
+## Photo gallery
+
+1. Add images to `assets/images/gallery/` using the name pattern **`YYYY-theme-##.jpg`**
+   (examples: `2025-wabun-01.jpg`, `2026-rowing-03.jpg`).
+2. Optionally add an ~800px-wide thumb with the **same filename** under
+   `assets/images/gallery/thumbs/`.
+3. Register each photo in `_data/gallery.yml` (`image`, `title`, `caption`;
+   optional `thumb`, `category`, `year`).

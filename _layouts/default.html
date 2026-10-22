@@ -55,7 +55,6 @@
                 >Extracurriculars</a
               >
             </li>
-            {% comment %} Gallery paused
             <li>
               <a
                 href="{{ '/photography/' | relative_url }}"
@@ -63,7 +62,6 @@
                 >Through the Lens</a
               >
             </li>
-            {% endcomment %}
           </ul>
         </nav>
       </div>
@@ -92,5 +90,8 @@
         <p class="stern__fine">Copyright &copy; {{ site.time | date: "%Y" }} Victoria Wellington</p>
       </div>
     </footer>
+    {% if page.url contains 'photography' %}
+    <script src="{{ '/assets/js/gallery.js' | relative_url }}" defer></script>
+    {% endif %}
   </body>
 </html>

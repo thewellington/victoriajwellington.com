@@ -1,13 +1,199 @@
-# Add your photos here. `image` paths are under the site root (e.g. /assets/...)
+# Photo gallery catalog.
+#
+# Naming (files under assets/images/gallery/):
+#   YYYY-theme-##.jpg
+#   Examples: 2025-wabun-01.jpg, 2026-rowing-03.jpg, 2026-street-01.jpg
+# Thumbs (optional, same filename):
+#   assets/images/gallery/thumbs/YYYY-theme-##.jpg  (~800px wide)
+#
+# Fields:
+#   image     — full-size path (required)
+#   thumb     — grid image; falls back to image if omitted
+#   title     — short label under the photo
+#   caption   — one-line description
+#   category  — optional (e.g. wabun, rowing, street, nature); for future filters
+#   year      — optional four-digit year
+#
+# Titles/captions are provisional — refine with Victoria.
 
-- title: "Campfire geometry"
-  image: /assets/images/gallery/placeholder-lake.svg
-  caption: "Replace with a real image — summer nights, pine smoke, and stars."
+- title: "Moss and company"
+  image: /assets/images/gallery/2025-nature-01.jpg
+  thumb: /assets/images/gallery/thumbs/2025-nature-01.jpg
+  caption: "A forest pause among the ferns."
+  category: nature
+  year: 2025
 
-- title: "On the water"
-  image: /assets/images/gallery/placeholder-crew.svg
-  caption: "Replace with a real image from the island or the lake."
+- title: "Stop ICE cruelty"
+  image: /assets/images/gallery/2026-street-01.jpg
+  thumb: /assets/images/gallery/thumbs/2026-street-01.jpg
+  caption: "From inside the march."
+  category: street
+  year: 2026
 
-- title: "Shutter happy"
-  image: /assets/images/gallery/placeholder-light.svg
-  caption: "Photography is the extracurricular with its own light meter."
+- title: "Outside Molly Moon's"
+  image: /assets/images/gallery/2026-street-02.jpg
+  thumb: /assets/images/gallery/thumbs/2026-street-02.jpg
+  caption: "Signs and a Seattle sidewalk."
+  category: street
+  year: 2026
+
+- title: "Two signs"
+  image: /assets/images/gallery/2026-street-03.jpg
+  thumb: /assets/images/gallery/thumbs/2026-street-03.jpg
+  caption: "Red jacket, white beanie, overcast light."
+  category: street
+  year: 2026
+
+- title: "At the light"
+  image: /assets/images/gallery/2026-street-04.jpg
+  thumb: /assets/images/gallery/thumbs/2026-street-04.jpg
+  caption: "An intersection held for the march."
+  category: street
+  year: 2026
+
+- title: "No justice, no peace"
+  image: /assets/images/gallery/2026-street-05.jpg
+  thumb: /assets/images/gallery/thumbs/2026-street-05.jpg
+  caption: "A wet street and a long line of feet."
+  category: street
+  year: 2026
+
+- title: "Hand-lettered"
+  image: /assets/images/gallery/2026-street-06.jpg
+  thumb: /assets/images/gallery/thumbs/2026-street-06.jpg
+  caption: "One sign, one intersection."
+  category: street
+  year: 2026
+
+- title: "Across the barricades"
+  image: /assets/images/gallery/2026-street-07.jpg
+  thumb: /assets/images/gallery/thumbs/2026-street-07.jpg
+  caption: "Looking over the line toward SW Alaska."
+  category: street
+  year: 2026
+
+- title: "Sanctuary city"
+  image: /assets/images/gallery/2026-street-08.jpg
+  thumb: /assets/images/gallery/thumbs/2026-street-08.jpg
+  caption: "SW Alaska Street, mid-march."
+  category: street
+  year: 2026
+
+- title: "Handmade cardboard"
+  image: /assets/images/gallery/2026-street-09.jpg
+  thumb: /assets/images/gallery/thumbs/2026-street-09.jpg
+  caption: "Humor and anger on the same scrap of box."
+  category: street
+  year: 2026
+
+- title: "Gap to the water"
+  image: /assets/images/gallery/2026-landscape-01.jpg
+  thumb: /assets/images/gallery/thumbs/2026-landscape-01.jpg
+  caption: "Blue hour through the trees."
+  category: landscape
+  year: 2026
+
+- title: "Rosemary in bloom"
+  image: /assets/images/gallery/2026-nature-01.jpg
+  thumb: /assets/images/gallery/thumbs/2026-nature-01.jpg
+  caption: "Sidewalk green with a soft background."
+  category: nature
+  year: 2026
+
+- title: "Pole tag"
+  image: /assets/images/gallery/2026-detail-01.jpg
+  thumb: /assets/images/gallery/thumbs/2026-detail-01.jpg
+  caption: "Weathered wood and a stamped number."
+  category: detail
+  year: 2026
+
+- title: "Shelter light"
+  image: /assets/images/gallery/2026-night-01.jpg
+  thumb: /assets/images/gallery/thumbs/2026-night-01.jpg
+  caption: "Bus stops under a late evening sky."
+  category: night
+  year: 2026
+
+- title: "March flyer"
+  image: /assets/images/gallery/2026-night-03.jpg
+  thumb: /assets/images/gallery/thumbs/2026-night-03.jpg
+  caption: "A Seattle Women's March poster on a night time pole."
+  category: night
+  year: 2026
+
+- title: "Snow on pink"
+  image: /assets/images/gallery/2026-nature-02.jpg
+  thumb: /assets/images/gallery/thumbs/2026-nature-02.jpg
+  caption: "Early blooms with a dusting of white."
+  category: nature
+  year: 2026
+
+- title: "Spring terrace"
+  image: /assets/images/gallery/2026-nature-03.jpg
+  thumb: /assets/images/gallery/thumbs/2026-nature-03.jpg
+  caption: "Rhododendrons and a passerby."
+  category: nature
+  year: 2026
+
+- title: "Shallow water"
+  image: /assets/images/gallery/2026-nature-04.jpg
+  thumb: /assets/images/gallery/thumbs/2026-nature-04.jpg
+  caption: "A rocky stream under the canopy."
+  category: nature
+  year: 2026
+
+- title: "Iris"
+  image: /assets/images/gallery/2019-creative-01.jpg
+  thumb: /assets/images/gallery/thumbs/2019-creative-01.jpg
+  caption: "Close enough to catch the trees in the reflection."
+  category: creative
+  year: 2019
+
+- title: "Hoodie light"
+  image: /assets/images/gallery/2019-creative-02.jpg
+  thumb: /assets/images/gallery/thumbs/2019-creative-02.jpg
+  caption: "Hair catching the only bright edge in the room."
+  category: creative
+  year: 2019
+
+- title: "Orb web"
+  image: /assets/images/gallery/2019-creative-03.jpg
+  thumb: /assets/images/gallery/thumbs/2019-creative-03.jpg
+  caption: "A broken geometry hung against the building."
+  category: creative
+  year: 2019
+
+- title: "Red maple"
+  image: /assets/images/gallery/2019-creative-04.jpg
+  thumb: /assets/images/gallery/thumbs/2019-creative-04.jpg
+  caption: "Autumn leaves against red siding."
+  category: creative
+  year: 2019
+
+- title: "Golden hour shutter"
+  image: /assets/images/gallery/2019-creative-05.jpg
+  thumb: /assets/images/gallery/thumbs/2019-creative-05.jpg
+  caption: "Someone else looking through a lens."
+  category: creative
+  year: 2019
+
+- title: "Side glance"
+  image: /assets/images/gallery/2019-creative-06.jpg
+  thumb: /assets/images/gallery/thumbs/2019-creative-06.jpg
+  caption: "Portrait study in soft outdoor light."
+  category: creative
+  year: 2019
+
+- title: "Two under the maple"
+  image: /assets/images/gallery/2019-creative-07.jpg
+  thumb: /assets/images/gallery/thumbs/2019-creative-07.jpg
+  caption: "A quiet exchange outside the building."
+  category: creative
+  year: 2019
+
+- title: "Avis"
+  image: /assets/images/gallery/2019-creative-08.jpg
+  thumb: /assets/images/gallery/thumbs/2019-creative-08.jpg
+  caption: "Shallow focus."
+  category: creative
+  year: 2019

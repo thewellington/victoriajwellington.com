@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "variables" as *;
 @use "carbon" as carbon;
 
@@ -131,16 +132,12 @@ a:hover {
 }
 
 .pill--mcmurray::before {
-  background: #1e3a5f;
+  background: $school-mcmurray;
 }
 
 .pill--vhs::before {
-  background: #2d6a4f;
+  background: $school-vhs;
 }
-
-$school-mcmurray: #1e3a5f;
-$school-vhs: #2d6a4f;
-$school-wabun: #c0392b;
 
 .school-list {
   list-style: none;
@@ -200,6 +197,138 @@ $school-wabun: #c0392b;
 
 .rowing-seasons-grid {
   margin: 0.75rem 0 1.5rem;
+}
+
+// —— Extracurricular activity tabs (rowing / Wabun) ——
+
+.activity-tabs {
+  margin-top: 0.35rem;
+  max-width: 56rem;
+}
+
+.activity-tabs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  border-bottom: 1px solid $line;
+}
+
+.activity-tabs__tab {
+  appearance: none;
+  margin: 0 0 -1px;
+  padding: 0.55rem 1rem 0.65rem;
+  border-style: solid;
+  border-width: 1px 1px 3px;
+  border-color: transparent;
+  border-radius: 0.45rem 0.45rem 0 0;
+  color: $ink;
+  font-family: $font-display;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.activity-tabs__tab--oar {
+  background: rgba(126, 207, 244, 0.16);
+  border-top-color: rgba(126, 207, 244, 0.35);
+  border-right-color: rgba(126, 207, 244, 0.35);
+  border-left-color: rgba(126, 207, 244, 0.35);
+  border-bottom-color: transparent;
+}
+
+.activity-tabs__tab--wabun {
+  background: rgba(192, 57, 43, 0.1);
+  border-top-color: rgba(192, 57, 43, 0.28);
+  border-right-color: rgba(192, 57, 43, 0.28);
+  border-left-color: rgba(192, 57, 43, 0.28);
+  border-bottom-color: transparent;
+}
+
+.activity-tabs__tab--vhs {
+  background: color.change($school-vhs, $alpha: 0.14);
+  border-top-color: color.change($school-vhs, $alpha: 0.35);
+  border-right-color: color.change($school-vhs, $alpha: 0.35);
+  border-left-color: color.change($school-vhs, $alpha: 0.35);
+  border-bottom-color: transparent;
+}
+
+.activity-tabs__tab--mcmurray {
+  background: color.change($school-mcmurray, $alpha: 0.14);
+  border-top-color: color.change($school-mcmurray, $alpha: 0.35);
+  border-right-color: color.change($school-mcmurray, $alpha: 0.35);
+  border-left-color: color.change($school-mcmurray, $alpha: 0.35);
+  border-bottom-color: transparent;
+}
+
+.activity-tabs__tab[aria-selected="false"] {
+  opacity: 0.72;
+}
+
+.activity-tabs__tab:hover {
+  opacity: 1;
+}
+
+.activity-tabs__tab:focus-visible {
+  outline: 2px solid $blade-deep;
+  outline-offset: 2px;
+}
+
+.activity-tabs__tab--oar[aria-selected="true"] {
+  opacity: 1;
+  border-bottom-color: $blade;
+}
+
+.activity-tabs__tab--wabun[aria-selected="true"] {
+  opacity: 1;
+  border-bottom-color: $school-wabun;
+}
+
+.activity-tabs__tab--vhs[aria-selected="true"] {
+  opacity: 1;
+  border-bottom-color: $school-vhs;
+}
+
+.activity-tabs__tab--mcmurray[aria-selected="true"] {
+  opacity: 1;
+  border-bottom-color: $school-mcmurray;
+}
+
+.activity-tabs__tab--oar:focus-visible {
+  outline-color: $blade-deep;
+}
+
+.activity-tabs__tab--wabun:focus-visible {
+  outline-color: $school-wabun;
+}
+
+.activity-tabs__tab--vhs:focus-visible {
+  outline-color: $school-vhs;
+}
+
+.activity-tabs__tab--mcmurray:focus-visible {
+  outline-color: $school-mcmurray;
+}
+
+.activity-tabs__panel {
+  padding-top: 0.15rem;
+}
+
+.activity-tabs__panel[hidden] {
+  display: none;
+}
+
+.activity-tabs__panel .prose {
+  max-width: none;
+}
+
+.activity-tabs__panel .pill {
+  display: inline-flex;
+  margin-bottom: 0.85rem;
 }
 
 .map-embed {
@@ -266,6 +395,12 @@ $school-wabun: #c0392b;
   font-weight: 600;
   letter-spacing: 0.02em;
   color: $graphite;
+}
+
+.school-class--in-panel {
+  display: block;
+  font-size: 0.85rem;
+  margin: 0 0 0.55rem;
 }
 
 .two-col {
@@ -365,7 +500,21 @@ $school-wabun: #c0392b;
   @include carbon.carbon-fiber($hull);
   color: $paper;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06), 0 8px 24px rgba(0, 0, 0, 0.35);
-  border-bottom: 3px solid $blade;
+  border-bottom: none;
+}
+
+.mast::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    $school-vhs 0%,
+    $school-mcmurray 25%,
+    $blade 50%,
+    $school-wabun 75%,
+    $gold 100%
+  );
 }
 
 .mast__inner {
@@ -449,17 +598,26 @@ $school-wabun: #c0392b;
 
 .rail-stripe__band {
   flex: 1;
-  @include carbon.carbon-fiber($ink);
 }
 
-.rail-stripe__band--light {
-  background: $paper;
+.rail-stripe__band--vhs {
+  background: $school-vhs;
+}
+
+.rail-stripe__band--mcmurray {
+  background: $school-mcmurray;
 }
 
 .rail-stripe__band--blade {
-  flex: 0 0 12%;
-  max-width: 5rem;
   background: $blade;
+}
+
+.rail-stripe__band--wabun {
+  background: $school-wabun;
+}
+
+.rail-stripe__band--gold {
+  background: $gold;
 }
 
 .stern {

@@ -68,11 +68,11 @@
     </header>
 
     <div class="rail-stripe" role="presentation" aria-hidden="true">
+      <span class="rail-stripe__band rail-stripe__band--vhs"></span>
+      <span class="rail-stripe__band rail-stripe__band--mcmurray"></span>
       <span class="rail-stripe__band rail-stripe__band--blade"></span>
-      <span class="rail-stripe__band rail-stripe__band--light"></span>
-      <span class="rail-stripe__band"></span>
-      <span class="rail-stripe__band rail-stripe__band--light"></span>
-      <span class="rail-stripe__band rail-stripe__band--blade"></span>
+      <span class="rail-stripe__band rail-stripe__band--wabun"></span>
+      <span class="rail-stripe__band rail-stripe__band--gold"></span>
     </div>
 
     <main class="content">
@@ -92,6 +92,9 @@
     </footer>
     {% if page.url contains 'photography' %}
     <script src="{{ '/assets/js/gallery.js' | relative_url }}" defer></script>
+    {% endif %}
+    {% if page.url contains 'academic' or page.url contains 'extracurricular' %}
+    <script src="{{ '/assets/js/activity-tabs.js' | relative_url }}" defer></script>
     {% endif %}
     {% if page.url contains 'extracurricular' %}
     <script src="{{ '/assets/js/map-embed.js' | relative_url }}" defer></script>

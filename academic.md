@@ -18,10 +18,17 @@ description: Academics and highlights for college applications.
   <li><strong>Honors math</strong> (2026&ndash;2027)</li>
 </ul>
 
+### Clubs
+
+<ul class="school-list school-list--vhs">
+  <li><strong>Associated Student Body</strong>, Freshman Council (2026&ndash;2027)</li>
+</ul>
+
 ### Band
 
 <ul class="school-list school-list--vhs">
   <li><strong>Wind Ensemble</strong> (2026&ndash;2027)</li>
+  <li><strong>Pirate Pep Band</strong> (2026&ndash;2027)</li>
 </ul>
 
 ## McMurray Middle School <span class="school-class">(Class of 2026)</span>

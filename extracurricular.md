@@ -32,7 +32,7 @@ description: Camp Wabun, rowing, and other commitments outside the classroom.
 <ul class="oar-cta oar-cta--start">
   <li><a href="{{ '/race-log/' | relative_url }}">Race log</a></li>
 </ul>
-<p class="oar-cta__note">Regatta times since fall 2025 &mdash; Tail of the Lake, Vancouver Lake Sprints, Swiftwater Sprints, Northwest Regionals.</p>
+<p class="oar-cta__note">Regatta times since fall 2025 &mdash; American Lake Fall Classic, Tail of the Lake, Vancouver Lake Sprints, Swiftwater Sprints, Northwest Regionals.</p>
 
 ## Wilderness canoe tripping &mdash; Camp Wabun
 

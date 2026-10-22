@@ -43,27 +43,49 @@ description: Camp Wabun, rowing, and other commitments outside the classroom.
 <ul class="school-list school-list--wabun wabun-years">
   <li>
     <h3 class="wabun-years__heading">2026 summer routes</h3>
-    <div class="map-embed map-embed--wabun">
+    <div class="map-embed map-embed--wabun" data-map-embed>
       <iframe
         src="https://caltopo.com/m/5LJK63C"
         title="2026 Camp Wabun canoe trips on CalTopo"
         loading="lazy"
+        inert
+        tabindex="-1"
+        aria-hidden="true"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
+      <a
+        class="map-embed__link"
+        href="https://caltopo.com/m/5LJK63C"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="visually-hidden">Open 2026 Camp Wabun trips on CalTopo (new tab)</span>
+      </a>
     </div>
-    <p class="map-embed__note">Victoria&rsquo;s 2026 trips, mapped on <a href="https://caltopo.com/m/5LJK63C">CalTopo</a>.</p>
+    <p class="map-embed__note">Victoria&rsquo;s 2026 trips, mapped on <a href="https://caltopo.com/m/5LJK63C" target="_blank" rel="noopener noreferrer">CalTopo</a>.</p>
   </li>
   <li>
     <h3 class="wabun-years__heading">2025 summer routes</h3>
-    <div class="map-embed map-embed--wabun">
+    <div class="map-embed map-embed--wabun" data-map-embed>
       <iframe
         src="https://caltopo.com/m/DQ1FJD6"
         title="2025 Camp Wabun Mattawa trips on CalTopo"
         loading="lazy"
+        inert
+        tabindex="-1"
+        aria-hidden="true"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
+      <a
+        class="map-embed__link"
+        href="https://caltopo.com/m/DQ1FJD6"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="visually-hidden">Open 2025 Camp Wabun Mattawa trips on CalTopo (new tab)</span>
+      </a>
     </div>
-    <p class="map-embed__note">Victoria&rsquo;s 2025 Mattawa trips, mapped on <a href="https://caltopo.com/m/DQ1FJD6">CalTopo</a>.</p>
+    <p class="map-embed__note">Victoria&rsquo;s 2025 Mattawa trips, mapped on <a href="https://caltopo.com/m/DQ1FJD6" target="_blank" rel="noopener noreferrer">CalTopo</a>.</p>
   </li>
   <li>
     <h3 class="wabun-years__heading">2024 summer</h3>

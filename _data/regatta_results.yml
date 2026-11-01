@@ -5,6 +5,30 @@ club: Vashon Island Rowing Club
 club_short: VIRC
 
 regattas:
+  - name: Head of the Lake
+    slug: head-of-the-lake-2026
+    date: 2026-11-01
+    date_label: November 1, 2026
+    venue: Lake Washington / Lake Union, Seattle, WA
+    format: head
+    host: Lake Washington Rowing Club
+    url: https://www.regattacentral.com/v3/regatta/10593
+    results_url: https://www.regattacentral.com/v3/regatta/results?event_id=6&job_id=10593
+    results:
+      - event: Girls U-17 4x+
+        boat: VIRC
+        seat: "3"
+        round: Head (~5k)
+        time: "22:21.8"
+        place: 6
+        note: E Webb and H Shrestha scratched sick.
+        crew:
+          - { seat: bow, name: substitute }
+          - { seat: "2", name: substitute }
+          - { seat: "3", name: V Wellington }
+          - { seat: stroke, name: J Ely }
+          - { seat: cox, name: A Cartier }
+
   - name: American Lake Fall Classic
     slug: american-lake-fall-classic-2026
     date: 2026-10-11

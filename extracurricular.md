@@ -74,8 +74,8 @@ slug: extracurricular
         <li><a href="{{ '/race-log/' | relative_url }}">Race log</a></li>
       </ul>
       <p class="oar-cta__note">
-        Regatta times since fall 2025 &mdash; American Lake Fall Classic, Tail of the Lake,
-        Vancouver Lake Sprints, Swiftwater Sprints, Northwest Regionals.
+        Regatta times since fall 2025 &mdash; Head of the Lake, American Lake Fall Classic,
+        Tail of the Lake, Vancouver Lake Sprints, Swiftwater Sprints, Northwest Regionals.
       </p>
     </div>
   </div>

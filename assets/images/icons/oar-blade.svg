@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Vashon oar blade">
+  <rect width="512" height="512" fill="#141418"/>
+  <g transform="translate(16 141) scale(0.96)">
+    <!-- loom -->
+    <rect x="-10" y="66" width="130" height="22" rx="4"
+          transform="rotate(9 117 77)" fill="#3aa3d9"/>
+    <!-- hatchet spoon (OarSpotter / RegattaCentral silhouette) -->
+    <path fill="#7ecff4" d="
+      M108 78
+      C130 95 155 140 175 175
+      C230 195 320 200 400 200
+      C430 200 450 198 455 190
+      L455 40
+      C450 30 440 26 400 26
+      C300 28 200 34 130 48
+      C118 54 110 64 108 78Z"/>
+  </g>
+</svg>

@@ -45,6 +45,17 @@ slug: extracurricular
     aria-labelledby="tab-rowing"
     data-panel="rowing"
   >
+    <figure class="activity-hero">
+      <img
+        class="activity-hero__img"
+        src="{{ '/assets/images/rowing/side-hero.jpg' | relative_url }}"
+        alt="Coxed four rowing under a bridge"
+        width="2400"
+        height="1152"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
     <div class="prose" markdown="0">
       <span class="pill pill--oar">Vashon Island Rowing Club · Vashon, WA</span>
 
@@ -88,6 +99,17 @@ slug: extracurricular
     data-panel="wabun"
     hidden
   >
+    <figure class="activity-hero">
+      <img
+        class="activity-hero__img"
+        src="{{ '/assets/images/wabun/canoe-hero.jpg' | relative_url }}"
+        alt="Red Camp Wabun canoe 21 on the water with two paddlers"
+        width="2400"
+        height="984"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
     <div class="prose" markdown="0">
       <span class="pill pill--wabun">Camp Wabun · Temagami, ON</span>
 

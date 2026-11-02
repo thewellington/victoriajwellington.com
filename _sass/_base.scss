@@ -328,6 +328,23 @@ a:hover {
   display: none;
 }
 
+.activity-hero {
+  margin: 0 0 1.15rem;
+  border-radius: $radius-card;
+  overflow: hidden;
+  border: 1px solid $line;
+  box-shadow: $shadow-float;
+  line-height: 0;
+}
+
+.activity-hero__img {
+  width: 100%;
+  height: clamp(11.5rem, 34vw, 22rem);
+  object-fit: cover;
+  object-position: center 42%;
+  display: block;
+}
+
 .activity-tabs__panel .prose {
   max-width: none;
 }

@@ -5,7 +5,7 @@ description: Camp Wabun, rowing, and other commitments outside the classroom.
 slug: extracurricular
 ---
 
-<div class="prose" markdown="1">
+<div class="prose prose--wide" markdown="1">
 
 <p class="lede">Some years are measured in semesters. Mine are also measured in summer trips, afternoon practices, and film rolls (yes, the digital kind still have soul).</p>
 
@@ -51,8 +51,8 @@ slug: extracurricular
       <p>
         I row for the
         <strong><a href="https://vashoncrew.org/">Vashon Island Rowing Club</a></strong>
-        on <strong>Vashon Island, Washington</strong>&mdash;afternoons and evenings on Puget Sound
-        with a boathouse community that shows up for each other.
+        on <strong>Vashon Island, Washington</strong>&mdash;afternoons and evenings on
+        Quartermaster Harbor with a boathouse community that shows up for each other.
       </p>
 
       <div class="two-col rowing-seasons-grid">

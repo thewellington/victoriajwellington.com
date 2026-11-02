@@ -78,6 +78,11 @@ a:hover {
   max-width: $max-read;
 }
 
+.prose.prose--wide {
+  max-width: none;
+  width: 100%;
+}
+
 .prose p,
 .prose li {
   font-size: 1.02rem;
@@ -203,7 +208,8 @@ a:hover {
 
 .activity-tabs {
   margin-top: 0.35rem;
-  max-width: 56rem;
+  max-width: none;
+  width: 100%;
 }
 
 .activity-tabs__list {
@@ -758,7 +764,7 @@ a:hover {
   font-size: 0.92rem;
   line-height: 1.5;
   color: $graphite;
-  max-width: 36rem;
+  max-width: none;
 }
 
 .gallery {

@@ -94,7 +94,7 @@ slug: extracurricular
       <p>
         <strong>Wilderness canoe tripping</strong> (2024&ndash;present) &mdash; Each summer, I head
         back to <strong>Camp Wabun</strong> for days of maps, cook fires, and carrying gear between
-        bodies of water that do not care about your schedule.
+        bodies of water that do not care about my schedule.
       </p>
 
       <ul class="school-list school-list--wabun wabun-years">
@@ -120,7 +120,7 @@ slug: extracurricular
             </a>
           </div>
           <p class="map-embed__note">
-            Victoria&rsquo;s 2026 trips, mapped on
+            My 2026 trips, mapped on
             <a href="https://caltopo.com/m/5LJK63C" target="_blank" rel="noopener noreferrer"
               >CalTopo</a
             >.
@@ -150,7 +150,7 @@ slug: extracurricular
             </a>
           </div>
           <p class="map-embed__note">
-            Victoria&rsquo;s 2025 Mattawa trips, mapped on
+            My 2025 Mattawa trips, mapped on
             <a href="https://caltopo.com/m/DQ1FJD6" target="_blank" rel="noopener noreferrer"
               >CalTopo</a
             >.

@@ -23,7 +23,7 @@ layout: default
   <div class="card card--extracurricular card--tilt">
     <h2>Extracurriculars</h2>
     <p>
-      Camp Wabun, the Vashon Island Rowing Club, clarinet, and the communities that teach you what textbooks cannot.
+      Camp Wabun, the Vashon Island Rowing Club, clarinet, and the communities that teach me what textbooks cannot.
     </p>
     <a href="{{ '/extracurricular/' | relative_url }}">Read more →</a>
   </div>
